@@ -1,49 +1,54 @@
-import React, { Component } from 'react';
-import WorldApi from './apiCalls';
+import React, { Component } from "react";
 
 class ShortCountry extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      population: 0,
-      male: 0,
-      female: 0
+      population: this.props.total,
+      male: this.props.male,
+      female: this.props.female
     };
-    this.worldApi = new WorldApi();
-    this.getCountryInfo = this.getCountryInfo.bind(this);
-  }
-
-  getCountryInfo() {
-    this.worldApi.getPopulationThisYearFor(this.props.name).then(fetchedPop =>
-      this.setState({
-        population: fetchedPop.total,
-        female: fetchedPop.females,
-        male: fetchedPop.males
-      })
-    );
   }
 
   render() {
     return (
-      <div>
-        <div>
-          <p onClick={this.getCountryInfo}>
+      <div
+        onClick = {this.props.onClick} // deferr action to parent
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: 'wrap',
+          alignItems: "center",
+          justifyContent: "space-between",
+          border: '1px solid black',
+          margin: '10px',
+          padding: '10px'
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div style={{fontSize: 'large', fontWeight: 'bold'}}>
             {this.props.name}
-          </p>
-          <span>Total Population</span>
-          <span>
-            {this.state.population}
-          </span>
+          </div>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <span>Total Population: </span>
+            <span>
+              {this.state.population}
+            </span>
+          </div>
         </div>
-        <div>
-          <span>Male Population</span>
-          <span>
-            {this.state.male}
-          </span>
-          <span>Female Population</span>
-          <span>
-            {this.state.female}
-          </span>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <span>Male Population: </span>
+            <span>
+              {this.state.male}
+            </span>
+          </div>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <span>Female Population: </span>
+            <span>
+              {this.state.female}
+            </span>
+          </div>
         </div>
       </div>
     );

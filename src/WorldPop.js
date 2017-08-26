@@ -20,7 +20,7 @@ class WorldPop extends Component {
     return (
       <div style={{ margin: '20px 40px', width: '30%' }}>
         <div>World Population</div>
-        <div className="label">As of Today</div>
+        <div className="label" style={{display: "inline-block", padding: "3px 8px"}}>As of Today</div>
         <div className="label">
           {this.state.population}
         </div>

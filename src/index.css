@@ -10,10 +10,18 @@ body {
 
 .container{
   width: 80%;
-  margin: auto;
+  margin: auto auto 50px auto;
 }
 
 .label{
   background-color: #ffc107;
   margin: 5px;
+}
+
+.blue {
+  background: #384ca2
+}
+
+.red {
+  background: red;
 }
