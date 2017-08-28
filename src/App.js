@@ -15,6 +15,7 @@ class App extends Component {
         </div>
         <p className="App-intro" />
         <div className="container">
+          <h1>World Population Application</h1>
           {/* <TodaysPop />*/}
           <div
             style={{

@@ -95,7 +95,7 @@ class ShortestCountries extends Component {
           </div>
         );
       } else {
-        return <button onClick={self.getShortestCountryNames}>Fetch</button>;
+        return <button className={'button white'} onClick={self.getShortestCountryNames}>Fetch</button>;
       }
     }
     return (

@@ -19,9 +19,23 @@ body {
 }
 
 .blue {
-  background: #384ca2
+  background: #384ca2;
 }
 
 .red {
-  background: red;
+  background: #de3e3e;
+}
+
+.white {
+  background: #ffffff;
+}
+
+
+.button{
+  border: 1px solid #ffc107;
+  cursor: pointer;
+}
+
+.button:hover{
+  background: #ffc107;
 }

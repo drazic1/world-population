@@ -20,7 +20,7 @@ class RankTitle extends Component {
             <option value="female">Female</option>
             <option value="male">Male</option>
           </select>
-          <button className={this.getBackground()} onClick={this.props.clickHandler}>{this.props.buttonTitle}</button>
+          <button className={this.getBackground() + ' button'} onClick={this.props.clickHandler}>{this.props.buttonTitle}</button>
         </div>
       </div>
     );
