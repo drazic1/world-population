@@ -10,3 +10,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 * `npm install`
 * `npm start`: Runs the app in the development mode. Open http://localhost:3000 to view it in the browser if it doesn't open automatically.
+
+## Screenshots
+
+![Landing Page](/screens/screen-1.png?raw=true "Landing Page")
+
+![Second Screen](/screens/screen-2.png?raw=true "Detailed Page")
